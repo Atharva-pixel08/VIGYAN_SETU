@@ -3,50 +3,213 @@
 <head>
   <meta charset="UTF-8">
   <title>VIGYAN SETU PVT LTD - Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header { background: #004080; color: white; padding: 15px; text-align: center; }
-    nav { background: #e0e0e0; padding: 10px; text-align: center; }
-    nav a { margin: 0 15px; text-decoration: none; color: #004080; font-weight: bold; }
-    section { padding: 20px; }
-    form { max-width: 400px; margin: auto; }
-    input, textarea { width: 100%; padding: 10px; margin: 5px 0; }
-    button { background: #004080; color: white; padding: 10px; border: none; cursor: pointer; }
-    footer { background: #004080; color: white; text-align: center; padding: 10px; }
+    :root {
+      --primary: #004080;
+      --secondary: #1f7a1f;
+      --light: #f4f6f9;
+      --dark: #333;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #004080, #0066cc);
+      color: white;
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.3rem;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    /* Navigation */
+    nav {
+      background: var(--white);
+      padding: 12px 0;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    /* Main Section */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--white);
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    }
+
+    .card h2, .card h3 {
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    /* Form */
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 6px;
+      margin-top: 14px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 0.95rem;
+      transition: 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: var(--primary);
+      outline: none;
+      box-shadow: 0 0 6px rgba(0,64,128,0.3);
+    }
+
+    button {
+      width: 100%;
+      margin-top: 22px;
+      background: linear-gradient(135deg, var(--secondary), #2e9e2e);
+      color: white;
+      padding: 14px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Address */
+    .address p {
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    .address strong {
+      color: var(--dark);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 16px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      section {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 1.9rem;
+      }
+    }
   </style>
 </head>
-<body>
-  <header>
-    <h1>Contact Us</h1>
-  </header>
-  <nav>
-    <a href="VIGYAN SETU.html">Home</a>
-    <a href="VIGYAN SETU2.html">About</a>
-    <a href="VIGYAN SETU3.html">Contact</a>
 
-  </nav>
-  <section>
+<body>
+
+<header>
+  <h1>Contact Us</h1>
+  <p>We’re here to help and answer your questions</p>
+</header>
+
+<nav>
+  <a href="VIGYAN SETU.html">Home</a>
+  <a href="VIGYAN SETU2.html">About</a>
+  <a href="VIGYAN SETU3.html">Contact</a>
+</nav>
+
+<section>
+
+  <!-- Contact Form -->
+  <div class="card">
     <h2>Get in Touch</h2>
     <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-      
-      <button type="submit">Send</button>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
     </form>
+  </div>
+
+  <!-- Address Card -->
+  <div class="card address">
     <h3>Our Address</h3>
-    <p>VIGYAN SETU PVT LTD<br>
-       Knowledge Park, Pune, India<br>
-       Phone: +91-9112331590<br>
-       Email: atharavingale015@gmail.com</p>
-  </section>
-  <footer>
-    <p>&copy; 2025 VIGYAN SETU PVT LTD. All Rights Reserved.</p>
-  </footer>
+    <p><strong>VIGYAN SETU PVT LTD</strong></p>
+    <p>Knowledge Park, Pune, India</p>
+    <p><strong>Phone:</strong> +91-9112331590</p>
+    <p><strong>Email:</strong> atharavingale015@gmail.com</p>
+  </div>
+
+</section>
+
+<footer>
+  <p>&copy; 2025 VIGYAN SETU PVT LTD. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
